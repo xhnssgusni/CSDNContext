@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./bootstrap.min.css" />
+    <script src="./jquery.min.js"></script>
+    <script src="./bootstrap.min.js"></script>
+  </head>
+  <style>
+    .box {
+      position: absolute;
+      top: 100px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 600px;
+      height: 400px;
+    }
+
+    .content {
+      width: 600px;
+      height: 400px;
+      background-color: pink;
+    }
+
+    .content img {
+      width: 100%;
+      height: 100%;
+    }
+
+    .glyphicon-chevron-right:before,
+    .glyphicon-chevron-left:before {
+      content: "";
+    }
+  </style>
+  <body>
+    <div class="box">
+      <!-- 整个模块 -->
+      <div
+        id="carousel-example-generic"
+        class="carousel slide"
+        data-ride="carousel"
+      >
+        <!-- 指标的意思：就是分页器 -->
+        <ol class="carousel-indicators">
+          <li
+            data-target="#carousel-example-generic"
+            data-slide-to="0"
+            class="active"
+          ></li>
+          <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+        </ol>
+
+        <!-- 轮播图内容区域 -->
+        <div class="carousel-inner" role="listbox">
+          <div class="item active content">
+            <img
+              src="https://photo.tuchong.com/7127938/f/377934320.jpg"
+              alt="..."
+            />
+            <!-- <div class="carousel-caption">第一张图片</div> -->
+          </div>
+          <div class="item content">
+            <img
+              src="https://photo.tuchong.com/15809914/f/830276539.jpg"
+              alt="..."
+            />
+            <!-- <div class="carousel-caption">第二张图片</div> -->
+          </div>
+          <div class="item content">
+            <img
+              src="https://photo.tuchong.com/7127938/f/361943851.jpg"
+              alt="..."
+            />
+            <!-- <div class="carousel-caption">第三张图片</div> -->
+          </div>
+        </div>
+
+        <!-- 左右控制按钮 -->
+        <a
+          class="left carousel-control"
+          href="#carousel-example-generic"
+          role="button"
+          data-slide="prev"
+        >
+          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"
+            >></span
+          >
+        </a>
+        <a
+          class="right carousel-control"
+          href="#carousel-example-generic"
+          role="button"
+          data-slide="next"
+        >
+          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"
+            ><</span
+          >
+        </a>
+      </div>
+    </div>
+    <script>
+      $(".carousel").carousel({
+        interval: 1000,
+        pause: "hover",
+      });
+    </script>
+  </body>
+</html>
